@@ -1,0 +1,166 @@
+html {
+    scroll-behavior: smooth;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+
+    background-color: #23272a;
+    font-family: sans-serif;
+}
+
+
+.title {
+    font-size: 6vh;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0;
+    padding-top: 5vh;
+    padding-bottom: 0;
+}
+
+.undertitle {
+    font-size: 2vh;
+    color: #7289da;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0;
+    padding-bottom: 10vh;
+}
+
+.troll {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 9vh;
+    padding-left: 38%;
+    padding-right: 38%;
+}
+
+
+.fadeinanimate {
+    animation: fadein ease 1.5s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes turning {
+    0% {
+        color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        color: rgba(0, 0, 0, 1);
+    }
+}
+
+.modalContainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    animation: fadein ease 0.3s;
+}
+
+.modalContent {
+    animation: fadein ease 0.3s;
+    background-color: #7289da;
+    margin: 10vh auto;
+    padding: 2vh;
+    border: 0.1vh solid #7289da;
+    width: 60vh;
+}
+.winnerText {
+    font-weight: bolder;
+    font-size: 3vh;
+    text-align: center;
+    animation: fadein ease 0.3s;
+}
+
+.winnerText2 {
+    font-weight: bolder;
+    font-size: 2vh;
+    text-align: center;
+    animation: fadein ease 0.3s;
+}
+
+.piece_flipped {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    align-items: center;
+    text-align: center;
+    font-size: 6vh;
+    cursor: pointer;
+    padding: 1vh;
+    margin: 0.1vh;
+    background-color: #7289da;
+    border: #7289da;
+    border-radius: 0.3vh;
+    color: rgba(0, 0, 0, 1);
+    transform: rotateY(180deg);
+    animation: turning cubic-bezier(1,.13,1,-0.34) 0.4s;
+}
+
+.piece_solved {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    align-items: center;
+    text-align: center;
+    font-size: 6vh;
+    cursor: not-allowed;
+    padding: 1vh;
+    margin: 0.1vh;
+    background-color: #7289da;
+    border: #7289da;
+    border-radius: 0.3vh;
+    color: rgba(0, 0, 0, 0);
+}
+
+.piece:hover {
+    opacity: 75%;
+}
+
+.piece_unflipped:hover {
+    opacity: 75%;
+}
+
+.fadeinanimate {
+    animation: fadein ease 1.5s;
+}
+
+.buttonContainer {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.resetbtn {
+    font-size: 2vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    background-color: #ff001f;
+    border: 0;
+    padding: 1vh 2vh;
+    margin: 0.1vh;
+    border-radius: 0.3vh;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
